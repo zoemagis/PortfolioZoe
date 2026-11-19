@@ -1,0 +1,544 @@
+css
+/* =====================================
+   THE LOVERS FESTIVAL
+   ESTILO GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #17131F;
+    color: #F5F0EA;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   ENCABEZADO
+===================================== */
+
+header {
+    text-align: center;
+    padding: 70px 20px 45px;
+    background: linear-gradient(135deg, #24152F, #17131F, #421C37);
+    border-bottom: 3px solid #C83F78;
+}
+
+header h1 {
+    font-size: 85px;
+    font-weight: 900;
+    letter-spacing: 12px;
+    color: #E8B65C;
+    margin-bottom: 5px;
+    text-shadow: 0 0 25px rgba(232, 182, 92, 0.3);
+}
+
+header h2 {
+    color: #F5F0EA;
+    font-size: 27px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+header p {
+    color: #E8B65C;
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+header img {
+    width: 85%;
+    max-width: 1000px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 35px auto;
+    border: 2px solid #C83F78;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =====================================
+   MENU DE NAVEGACION
+===================================== */
+
+nav {
+    margin-top: 30px;
+}
+
+nav h2 {
+    color: #E8B65C;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+}
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #F5F0EA;
+    border: 1px solid #C83F78;
+    padding: 10px 22px;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    background-color: #C83F78;
+    color: white;
+    transform: translateY(-4px);
+}
+
+
+/* =====================================
+   SECCIONES GENERALES
+===================================== */
+
+main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 30px 25px;
+}
+
+section {
+    padding: 65px 35px;
+    margin: 35px 0;
+    background-color: #211B2A;
+    border-radius: 18px;
+    border: 1px solid rgba(200, 63, 120, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    color: #E8B65C;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #C83F78;
+    margin: 15px auto;
+}
+
+section p {
+    text-align: center;
+    color: #D8CEDB;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   IMAGENES DE LAS SECCIONES
+===================================== */
+
+section img {
+    display: block;
+    width: 90%;
+    max-width: 850px;
+    height: 380px;
+    object-fit: cover;
+    margin: 30px auto;
+    border-radius: 15px;
+    border: 2px solid #C83F78;
+    transition: 0.4s;
+}
+
+section img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(200, 63, 120, 0.25);
+}
+
+
+/* =====================================
+   ARTISTAS
+===================================== */
+
+#Artistas ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    list-style: none;
+    margin: 30px 0;
+}
+
+#Artistas ul li {
+    background-color: #302338;
+    border-left: 4px solid #C83F78;
+    padding: 13px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#Artistas ul li:hover {
+    background-color: #C83F78;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   CRONOGRAMA
+===================================== */
+
+#Cronograma article {
+    background: linear-gradient(135deg, #302338, #251A2D);
+    border: 1px solid #75405E;
+    border-radius: 15px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    transition: 0.3s;
+}
+
+#Cronograma article:hover {
+    border-color: #E8B65C;
+    transform: translateY(-4px);
+}
+
+#Cronograma article h3 {
+    color: #C83F78;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+#Cronograma article h4 {
+    color: #E8B65C;
+    font-size: 18px;
+    margin: 8px 0 15px;
+}
+
+#Cronograma ol {
+    padding-left: 25px;
+}
+
+#Cronograma ol li {
+    padding: 6px 0;
+    color: #F5F0EA;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* =====================================
+   TABLA DE ENTRADAS
+===================================== */
+
+#Entradas table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    overflow: hidden;
+    border: none;
+}
+
+#Entradas th {
+    background-color: #C83F78;
+    color: white;
+    padding: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#Entradas td {
+    background-color: #302338;
+    padding: 18px;
+    border: 1px solid #594052;
+    color: #F5F0EA;
+}
+
+#Entradas tr:hover td {
+    background-color: #413044;
+}
+
+#Entradas td:nth-child(2) {
+    color: #E8B65C;
+    font-weight: bold;
+    text-align: center;
+    font-size: 19px;
+}
+
+
+/* =====================================
+   FORMULARIO
+===================================== */
+
+#Inscripcion form {
+    max-width: 700px;
+    margin: 30px auto 0;
+    background-color: #302338;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #75405E;
+}
+
+#Inscripcion label {
+    display: inline-block;
+    margin: 12px 0 7px;
+    color: #E8B65C;
+    font-weight: 600;
+}
+
+#Inscripcion input[type="text"],
+#Inscripcion input[type="email"],
+#Inscripcion input[type="tel"],
+#Inscripcion input[type="number"],
+#Inscripcion select,
+#Inscripcion textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #75405E;
+    border-radius: 8px;
+    background-color: #211B2A;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+#Inscripcion input:focus,
+#Inscripcion select:focus,
+#Inscripcion textarea:focus {
+    border-color: #E8B65C;
+    box-shadow: 0 0 8px rgba(232, 182, 92, 0.25);
+}
+
+#Inscripcion input[type="radio"],
+#Inscripcion input[type="checkbox"] {
+    accent-color: #C83F78;
+    margin: 12px 5px;
+}
+
+#Inscripcion button {
+    background-color: #C83F78;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    margin: 15px 8px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#Inscripcion button:hover {
+    background-color: #E8B65C;
+    color: #17131F;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   CONTACTO Y SERVICIOS
+===================================== */
+
+#Contacto ul,
+#Servicios ul {
+    max-width: 650px;
+    margin: 25px auto;
+    list-style: none;
+}
+
+#Contacto li,
+#Servicios li {
+    background-color: #302338;
+    padding: 13px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #C83F78;
+}
+
+#Contacto a {
+    color: #E8B65C;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#Contacto a:hover {
+    color: #C83F78;
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   ENLACES VOLVER ARRIBA
+===================================== */
+
+section > p a {
+    display: inline-block;
+    color: #E8B65C;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+section > p a:hover {
+    color: #C83F78;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background-color: #100D16;
+    border-top: 3px solid #C83F78;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #BDB1C3;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+footer p:first-child {
+    color: #E8B65C;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #C83F78;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #E8B65C;
+}
+
+
+/* =====================================
+   DISEÑO RESPONSIVE
+   CELULARES Y TABLETS
+===================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 45px 15px;
+    }
+
+    header h1 {
+        font-size: 45px;
+        letter-spacing: 5px;
+    }
+
+    header h2 {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    header img {
+        width: 100%;
+        height: 260px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        padding: 9px 14px;
+        font-size: 12px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 35px 18px;
+        margin: 20px 0;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    section img {
+        width: 100%;
+        height: 250px;
+    }
+
+    #Artistas ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #Entradas {
+        overflow-x: auto;
+    }
+
+    #Entradas table {
+        min-width: 600px;
+    }
+
+    #Inscripcion form {
+        padding: 20px;
+    }
+
+    #Inscripcion textarea {
+        width: 100%;
+    }
+}
+
+
+/* =====================================
+   CELULARES PEQUEÑOS
+===================================== */
+
+@media (max-width: 450px) {
+
+    header h1 {
+        font-size: 34px;
+        letter-spacing: 3px;
+    }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+    #Artistas ul {
+        grid-template-columns: 1fr;
+    }
+
+    #Cronograma article {
+        padding: 20px;
+    }
+
+    #Cronograma article h3 {
+        font-size: 18px;
+    }
+
+}

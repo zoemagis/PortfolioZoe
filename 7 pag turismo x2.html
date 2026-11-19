@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sydney | Guía turística</title>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f6f5f0;
+            color: #263b43;
+            line-height: 1.8;
+        }
+
+        /* MENU */
+
+        header {
+            background-color: #173b49;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d6b78b;
+        }
+
+        /* PORTADA */
+
+        .portada {
+            min-height: 550px;
+            background:
+                linear-gradient(rgba(0,0,0,0.35),
+                rgba(0,0,0,0.45)),
+                url('https://www.viajarsydney.com/img/que-visitar-sydney.jpg');
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .portada h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 65px;
+            margin-bottom: 10px;
+        }
+
+        .portada p {
+            font-size: 17px;
+            letter-spacing: 2px;
+        }
+
+        .etiqueta {
+            color: #d6b78b;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        /* SECCIONES */
+
+        section {
+            padding: 80px 10%;
+            scroll-margin-top: 75px;
+        }
+
+        .subtitulo {
+            color: #b18a61;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: #173b49;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #173b49;
+        }
+
+        .contenido {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .foto {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        /* ACTIVIDADES */
+
+        .actividades {
+            background-color: #e9efed;
+        }
+
+        .lista-actividades {
+            list-style: none;
+        }
+
+        .lista-actividades li {
+            padding: 12px;
+            border-bottom: 1px solid #dce3df;
+        }
+
+        .lista-actividades li::before {
+            content: "✦";
+            color: #b18a61;
+            margin-right: 12px;
+        }
+
+        /* PRECIOS */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #173b49;
+            color: white;
+            text-align: left;
+            padding: 18px;
+        }
+
+        td {
+            padding: 16px 18px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:hover td {
+            background-color: #f5f3ed;
+        }
+
+        /* CONTACTO */
+
+        .contacto {
+            background-color: #e9efed;
+        }
+
+        form {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            max-width: 650px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: 500;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d5ddda;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+        }
+
+        input:focus, textarea:focus {
+            outline: 2px solid #b18a61;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #173b49;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #b18a61;
+        }
+
+        /* PIE DE PAGINA */
+
+        footer {
+            background-color: #173b49;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 13px;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 25px;
+            color: #b18a61;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ADAPTACION A CELULARES */
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .portada h1 {
+                font-size: 42px;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+
+            .contenido {
+                padding: 22px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            td, th {
+                padding: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU PRINCIPAL -->
+
+    <header>
+        <div class="logo">Sydney.</div>
+
+        <nav>
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#Informacion">Información</a></li>
+                <li><a href="#Actividades">Actividades</a></li>
+                <li><a href="#Precios">Precios</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PORTADA -->
+
+    <div class="portada" id="Inicio">
+        <span class="etiqueta">Australia · Travel Guide</span>
+
+        <h1>Descubre Sídney</h1>
+
+        <p>Una ciudad entre el océano y la naturaleza</p>
+    </div>
+
+    <!-- INICIO -->
+
+    <section>
+        <span class="subtitulo">Bienvenidos a Australia</span>
+
+        <h2>Una ciudad para descubrir</h2>
+
+        <div class="contenido">
+
+            <p>
+                Sídney es la ciudad más grande de Australia y ofrece
+                una gran variedad de atracciones icónicas, playas
+                mundialmente famosas y una vibrante vida urbana.
+            </p>
+
+            <img
+                class="foto"
+                src="https://www.viajarsydney.com/img/que-visitar-sydney.jpg"
+                alt="Paisaje de Sídney">
+        </div>
+
+        <a class="volver" href="#Inicio">↑ Volver arriba</a>
+    </section>
+
+    <!-- INFORMACION -->
+
+    <section id="Informacion">
+        <span class="subtitulo">Conoce el destino</span>
+
+        <h2>Información general</h2>
+
+        <div class="contenido">
+
+            <h3>Sídney, Australia</h3>
+
+            <p>
+                <strong>Ubicación:</strong> Costa este de Australia,
+                en el estado de Nueva Gales del Sur, junto al océano Pacífico.
+            </p>
+
+            <p>
+                <strong>Cómo llegar:</strong> En avión al Aeropuerto
+                Internacional de Sídney. Desde allí puedes llegar
+                al centro en tren, autobús o taxi.
+            </p>
+
+            <p>
+                <strong>Clima:</strong> Templado durante todo el año.
+                Veranos cálidos (18–26 °C) e inviernos suaves (9–18 °C).
+            </p>
+
+            <p>
+                <strong>Mejor época:</strong> Primavera (septiembre–noviembre)
+                y otoño (marzo–mayo), por sus temperaturas agradables
+                y menor cantidad de turistas.
+            </p>
+
+            <p>
+                <strong>Verano:</strong> Ideal para disfrutar de playas
+                como Bondi, aunque hay más turistas y los precios
+                suelen subir.
+            </p>
+
+            <img
+                class="foto"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2yDCF1i830VJ9x3HjPPpCstJ_4Q4EfLeDat9nudsCgf7SetL0T9oQJ8s&s=10"
+                alt="Paisaje de Australia">
+        </div>
+
+        <a class="volver" href="#Inicio">↑ Volver arriba</a>
+    </section>
+
+    <!-- ACTIVIDADES -->
+
+    <section class="actividades" id="Actividades">
+
+        <span class="subtitulo">Experiencias inolvidables</span>
+
+        <h2>Qué hacer en Sídney</h2>
+
+        <div class="contenido">
+
+            <ul class="lista-actividades">
+                <li>Visitar la Ópera de Sídney.</li>
+                <li>Caminar por el Sydney Harbour Bridge.</li>
+                <li>Relajarse en Bondi Beach.</li>
+                <li>Tomar un ferry por la bahía.</li>
+                <li>Visitar el Royal Botanic Garden.</li>
+                <li>Conocer animales australianos en el Taronga Zoo.</li>
+                <li>Recorrer The Rocks, el barrio histórico.</li>
+                <li>Hacer surf, snorkel o nadar en sus playas.</li>
+                <li>Hacer una excursión a las Blue Mountains.</li>
+            </ul>
+
+            <img
+                class="foto"
+                src="https://assets.atdw-online.com.au/images/fdb160eeadc7d83ce96aa78c6c684b9d.jpeg?rect=178%2C0%2C2833%2C2125&w=1600&h=1200&&q=eyJ0eXBlIjoibGlzdGluZyIsImxpc3RpbmdJZCI6IjU2YjI0MGQwZDI3MDE1NGI0NTU0MjgyOSIsImRpc3RyaWJ1dG9ySWQiOiI1NmIxZWI5MzQ0ZmVjYTNkZjJlMzIwYzgiLCJhcGlrZXlJZCI6IjU2YjFlZTU5MGNmMjEzYWQyMGRjNTgxOSJ9"
+                alt="Royal Botanic Gardens">
+        </div>
+
+        <a class="volver" href="#Inicio">↑ Volver arriba</a>
+    </section>
+
+    <!-- PRECIOS -->
+
+    <section id="Precios">
+
+        <span class="subtitulo">Planea tu viaje</span>
+
+        <h2>Precios de las actividades</h2>
+
+        <div class="contenido">
+
+            <table>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Precio (AUD)</th>
+                </tr>
+
+                <tr>
+                    <td>Ópera de Sídney (tour)</td>
+                    <td>50</td>
+                </tr>
+
+                <tr>
+                    <td>Sydney Harbour Bridge (cruzarlo)</td>
+                    <td>Gratis</td>
+                </tr>
+
+                <tr>
+                    <td>Paseo en ferry</td>
+                    <td>7</td>
+                </tr>
+
+                <tr>
+                    <td>Taronga Zoo</td>
+                    <td>51</td>
+                </tr>
+
+                <tr>
+                    <td>Surf / snorkel</td>
+                    <td>Desde 50</td>
+                </tr>
+
+                <tr>
+                    <td>Blue Mountains (excursiones)</td>
+                    <td>Desde 50</td>
+                </tr>
+            </table>
+
+            <img
+                class="foto"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdrhdQPkuuEfWqlcB0ZKI8FNijPtIB4UqI6Ct3K7EUbvDxqON_0MmOysI&s=10"
+                alt="Jirafa en Taronga Zoo">
+        </div>
+
+        <a class="volver" href="#Inicio">↑ Volver arriba</a>
+    </section>
+
+    <!-- CONTACTO -->
+
+    <section class="contacto" id="Contacto">
+
+        <span class="subtitulo">Estamos para ayudarte</span>
+
+        <h2>Contacto</h2>
+
+        <form action="procesar.php" method="post">
+
+            <label for="nombre">Nombre y apellido</label>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required>
+
+            <label for="email">Correo electrónico</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required>
+
+            <label for="telefono">Número de teléfono</label>
+
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required>
+
+            <label for="Comentarios">Mensaje</label>
+
+            <textarea
+                id="Comentarios"
+                name="Comentarios"
+                rows="5"></textarea>
+
+            <button type="submit">Enviar formulario →</button>
+
+        </form>
+
+        <img
+            class="foto"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxBt2cYTJF8y-XSo7H4GgmddvYB0mbJcEh04B4oh-RmQ&s=10"
+            alt="Vista de Sídney">
+
+        <a class="volver" href="#Inicio">↑ Volver arriba</a>
+
+    </section>
+
+    <!-- PIE DE PAGINA -->
+
+    <footer>
+        <p>SYDNEY · AUSTRALIA</p>
+        <p>Descubre, explora y disfruta.</p>
+        <p>© 2026 - Guía turística de Sídney</p>
+    </footer>
+
+</body>
+</html>

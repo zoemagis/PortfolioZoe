@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parque Nacional Montañas del Sol</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    :root {
+      --verde-oscuro: #243e32;
+      --verde: #496b52;
+      --verde-claro: #e6ede5;
+      --crema: #f8f7f0;
+      --texto: #35443a;
+      --dorado: #b99b66;
+    }
+
+    body {
+      background-color: var(--crema);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--verde-oscuro);
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      color: #56635a;
+    }
+
+    .section-padding {
+      padding: 75px 0;
+    }
+
+    .section-light {
+      background-color: #ffffff;
+    }
+
+    .section-green {
+      background-color: var(--verde-claro);
+    }
+
+    .section-heading {
+      max-width: 750px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .section-heading p {
+      font-size: 1.05rem;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #e6ede5, #f8f7f0);
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin-bottom: 15px;
+    }
+
+    .hero h4 {
+      font-style: italic;
+      color: var(--verde);
+      margin-bottom: 25px;
+      font-size: 1.4rem;
+    }
+
+    .hero-text {
+      max-width: 850px;
+      margin: 0 auto 25px;
+    }
+
+    .navbar {
+      background-color: var(--verde-oscuro) !important;
+      padding: 18px 5%;
+    }
+
+    .navbar-brand {
+      color: #ffffff !important;
+      font-family: Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .navbar .nav-link {
+      color: #e9eee9 !important;
+      margin: 0 5px;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: #d6bc86 !important;
+    }
+
+    .dropdown-menu {
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--verde-claro);
+      color: var(--verde-oscuro);
+    }
+
+    .btn-outline-success {
+      color: var(--verde);
+      border-color: var(--verde);
+      border-radius: 25px;
+      padding: 9px 22px;
+    }
+
+    .btn-outline-success:hover {
+      background-color: var(--verde);
+      border-color: var(--verde);
+      color: white;
+    }
+
+    .alert {
+      margin-bottom: 0;
+      text-align: center;
+      border-radius: 0;
+      font-size: 0.85rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .carousel {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .carousel-inner {
+      border-radius: 15px;
+    }
+
+    .carousel-item img {
+      max-height: 480px;
+      object-fit: cover;
+      margin: auto;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: var(--verde-oscuro);
+      border-radius: 50%;
+      padding: 20px;
+    }
+
+    .accordion {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .accordion-item {
+      border: 1px solid #e0e5dd;
+      margin-bottom: 10px;
+      border-radius: 8px !important;
+      overflow: hidden;
+    }
+
+    .accordion-button {
+      background-color: #ffffff;
+      color: var(--verde-oscuro);
+      font-size: 1rem;
+      padding: 20px;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: var(--verde-claro);
+      color: var(--verde-oscuro);
+      box-shadow: none;
+    }
+
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: var(--verde);
+    }
+
+    .activities-list {
+      max-width: 700px;
+      margin: auto;
+      padding: 30px 45px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(36, 62, 50, 0.06);
+    }
+
+    .activities-list li {
+      padding: 8px 0;
+    }
+
+    .form-container {
+      max-width: 850px;
+      margin: auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(36, 62, 50, 0.06);
+    }
+
+    .form-control,
+    .form-select {
+      border-radius: 8px;
+      border-color: #dce3dc;
+      padding: 11px;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--verde);
+      box-shadow: 0 0 0 0.2rem rgba(73, 107, 82, 0.15);
+    }
+
+    .form-check-input:checked {
+      background-color: var(--verde);
+      border-color: var(--verde);
+    }
+
+    .form-check-input:focus {
+      border-color: var(--verde);
+      box-shadow: 0 0 0 0.2rem rgba(73, 107, 82, 0.15);
+    }
+
+    .card {
+      height: 100%;
+      border: none;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(36, 62, 50, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(36, 62, 50, 0.14);
+    }
+
+    .card-img-top {
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 0.92rem;
+    }
+
+    .list-group-item {
+      border-color: #edf0eb;
+      font-size: 0.9rem;
+    }
+
+    .card .btn {
+      margin: 10px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .footer {
+      background-color: var(--verde-oscuro);
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 50px;
+    }
+
+    .footer h4 {
+      color: white;
+    }
+
+    .footer p {
+      color: #dce5dc;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 992px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .section-padding {
+        padding: 50px 15px;
+      }
+
+      .form-container {
+        padding: 25px;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- AVISO -->
+  <div class="alert alert-danger" role="alert">
+    ALGUNOS SENDEROS PERMANECEN CERRADOS DEBIDO A LAS CONDICIONES CLIMÁTICAS
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">Montañas del Sol</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav me-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Actividades
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Senderismo por caminos de montaña</a></li>
+              <li><a class="dropdown-item" href="#">Observación de animales y aves</a></li>
+              <li><a class="dropdown-item" href="#">Escalada en sectores habilitados</a></li>
+              <li><a class="dropdown-item" href="#">Paseos en bicicleta por senderos</a></li>
+              <li><a class="dropdown-item" href="#">Fotografía de paisajes</a></li>
+              <li><a class="dropdown-item" href="#">Campamentos en zonas autorizadas</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#parque">El parque</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#senderos">Senderos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#fauna">Fauna</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#recomendaciones">Recomendaciones</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#visita">Visita</a>
+          </li>
+
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        </form>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- PRESENTACIÓN -->
+  <header class="hero" id="parque">
+
+    <div class="container">
+
+      <h1>Parque Nacional Montañas del Sol</h1>
+
+      <h4>“Donde las montañas tocan el cielo”</h4>
+
+      <div class="hero-text">
+
+        <p>
+          Se encuentra en la cordillera de los Andes, en una región
+          de Argentina, rodeada de montañas, lagos y bosques.
+        </p>
+
+        <p>
+          El Parque Nacional Montañas del Sol es un lugar ubicado en la cordillera de los Andes, en Argentina.
+          Se caracteriza por sus altas montañas nevadas, bosques verdes, ríos cristalinos y lagos.
+          Allí habitan animales como cóndores, pumas y guanacos.
+        </p>
+
+        <p>
+          Es un lugar ideal para disfrutar de la naturaleza, hacer caminatas y observar paisajes increíbles.
+        </p>
+
+      </div>
+
+      <button class="btn btn-outline-success" type="button">
+        Planificar mi visita
+      </button>
+
+    </div>
+  </header>
+
+  <!-- CARRUSEL DE IMÁGENES -->
+  <section class="section-padding section-light">
+
+    <div class="container">
+
+      <div id="carouselMultiple" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+          <h5 class="mb-0">Carrusel de imágenes del parque</h5>
+
+          <div>
+            <button class="btn btn-outline-success btn-sm" type="button" data-bs-target="#carouselMultiple" data-bs-slide="prev">
+              <span aria-hidden="true">‹</span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="btn btn-outline-success btn-sm" type="button" data-bs-target="#carouselMultiple" data-bs-slide="next">
+              <span aria-hidden="true">›</span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        </div>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="https://images.openai.com/static-rsc-4/9sWF4h1hcmOTKNb0tvoEw8EwfmwtxPbjk_qWmpoVoLnGvhfLdPu998Z_sIRSg1-bhG2hfweEDkt4r80BmzYkahKmP8Rhkhp86Ng1gl4KL-Ph7BPoG0JtglNPHTQqaJ2YvYCpij-l9vOUdVb8fIyiRDUAKq60niptL3gjS4mjdAcupXFyL-25rnZ7j4Mojkom?purpose=fullsize" class="d-block w-100 rounded-4" alt="Paisaje del parque">
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://images.openai.com/static-rsc-4/OOHedSI4iIUFp2aHPcL7nEglVNx5lGff9zYngzU-pi-RkVwgoOuRvSFI_cCenLaV_dgQdqC-HkZTms8_rncCy7m_ysz9qlo-oUL4o4EDbtk6bPzKkpEJNeWaciQKrz63Mz2wQC59OrCzOeUG0JldmCp8CFztHUGrjVaVcUyg4hjSDezyvUyRuAaLLHBjf2Dm?purpose=fullsize" class="d-block w-100 rounded-4" alt="Montañas del parque">
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://images.openai.com/static-rsc-4/XLKyGj1PICpGEW3etv1eEe429OpPRJL2ZNE4j9-G8eN_bylGmv2x7m6Fi_XYzYw_vzHIE7HNi2kXuI634aQ2BCd7ODbUJYBQjpEA4g5ny4N1KIeWjG3EbClo3J60KbYgKX3wQkA3UqR_UwjgeDkVkKK0AKSfrRakDORI_4N86m_LQAntJCDBd2ph9KL8YQwC?purpose=fullsize" class="d-block w-100 rounded-4" alt="Naturaleza del parque">
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://images.openai.com/static-rsc-4/wXerYRE1sTMwy1AoqO8NBMCYVTdXdLWF8TZUZfyX6nYsT2WIMKd0MkF959JAqLixS9ZHgDIM4Qd1gJGJ1CP7SZEMACjWMJqp1QhdDEbQ96obL8vO77i3sYPUgqqpK6MA6f_3pw0IKGQvNcxFGyei8yBmH7k3rFMFJI9Tafzd1c1x8aEQEnt5yDYlyJcnTBZv?purpose=fullsize" class="d-block w-100 rounded-4" alt="Paisaje de montaña">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  
+
+  <!-- RECOMENDACIONES -->
+  <section class="section-padding section-light" id="recomendaciones">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Recomendaciones para visitantes</h2>
+        <p>Todo lo que necesitás saber antes de comenzar tu aventura.</p>
+      </div>
+
+      <div class="accordion" id="accordionExample">
+
+        <div class="accordion-item">
+
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <strong>¿Qué ropa llevar?</strong>
+            </button>
+          </h2>
+
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Se recomienda llevar ropa cómoda, abrigo, campera impermeable y calzado de montaña antideslizante. En las zonas altas, las temperaturas pueden bajar rápidamente.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <strong>¿Qué alimentos llevar?</strong>
+            </button>
+          </h2>
+
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Llevá agua suficiente, frutas, frutos secos, barras de cereal y sándwiches. Guardá los alimentos en recipientes reutilizables y no alimentes a los animales silvestres.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <strong>¿Se permiten mascotas?</strong>
+            </button>
+          </h2>
+
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              No se permite el ingreso de mascotas a los senderos principales para proteger a la fauna silvestre y evitar molestias a los animales que viven en el parque.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <strong>¿Qué hacer con los residuos?</strong>
+            </button>
+          </h2>
+
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Guardá todos tus residuos en una bolsa y llevalos contigo hasta encontrar un cesto habilitado o salir del parque. No arrojes basura ni dejes restos de comida en los senderos.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <strong>¿Qué hacer si encuentro un animal?</strong>
+            </button>
+          </h2>
+
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Observá al animal desde una distancia segura, no lo toques ni intentes alimentarlo. Evitá los movimientos bruscos y avisá al personal del parque si está herido o en peligro.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              <strong>¿Qué ocurre si cambia el clima?</strong>
+            </button>
+          </h2>
+
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Si aparecen lluvias fuertes, nieve, niebla o vientos intensos, buscá un lugar seguro y seguí las indicaciones de los guardaparques. Si un sendero se cierra, no intentes continuar por él.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ACTIVIDADES -->
+  <section class="section-padding section-green">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Actividades</h2>
+        <p>Descubrí las experiencias que ofrece el Parque Nacional Montañas del Sol.</p>
+      </div>
+
+      <div class="activities-list">
+
+        <ul>
+          <li>Senderismo por caminos de montaña.</li>
+          <li>Observación de animales y aves.</li>
+          <li>Escalada en sectores habilitados.</li>
+          <li>Paseos en bicicleta por senderos.</li>
+          <li>Fotografía de paisajes.</li>
+          <li>Campamentos en zonas autorizadas.</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="section-padding section-light" id="visita">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Formulario – Planificá tu visita</h2>
+        <p>Completá tus datos y prepará tu próxima experiencia en la naturaleza.</p>
+      </div>
+
+      <div class="form-container">
+
+        <form>
+
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre y apellido</label>
+            <input type="text" class="form-control" id="nombre">
+          </div>
+
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" aria-describedby="emailHelp">
+          </div>
+
+          <div class="mb-3">
+            <label for="numero" class="form-label">Número</label>
+            <input type="tel" class="form-control" id="numero">
+          </div>
+
+          <div id="emailHelp" class="form-text mb-4">
+            Nunca compartiremos tus datos con nadie más.
+          </div>
+
+          <hr class="my-4">
+
+          <h2>Reserva tu visita</h2>
+
+          <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha de visita:</label>
+            <input type="date" class="form-control" id="fecha">
+          </div>
+
+          <div class="mb-4">
+            <label for="entrada" class="form-label">Cantidad de entradas:</label>
+
+            <select id="entrada" name="entrada" class="form-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+          <h3 class="mb-3">Actividades de interés</h3>
+
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="senderismo" id="checkDefault">
+            <label class="form-check-label" for="checkDefault">
+              Senderismo por caminos de montaña.
+            </label>
+          </div>
+
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="observacion" id="checkChecked" checked>
+            <label class="form-check-label" for="checkChecked">
+              Observación de animales y aves.
+            </label>
+          </div>
+
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="escalada" id="checkEscalada" checked>
+            <label class="form-check-label" for="checkEscalada">
+              Escalada en sectores habilitados.
+            </label>
+          </div>
+
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="bicicleta" id="checkBicicleta" checked>
+            <label class="form-check-label" for="checkBicicleta">
+              Paseos en bicicleta por senderos.
+            </label>
+          </div>
+
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="fotografia" id="checkFotografia" checked>
+            <label class="form-check-label" for="checkFotografia">
+              Fotografía de paisajes.
+            </label>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="campamento" id="checkCampamento" checked>
+            <label class="form-check-label" for="checkCampamento">
+              Campamentos en zonas autorizadas.
+            </label>
+          </div>
+
+          <hr class="my-4">
+
+          <h3 class="mb-3">Experiencia</h3>
+
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" checked>
+            <label class="form-check-label" for="radioDefault1">
+              Principiante
+            </label>
+          </div>
+
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
+            <label class="form-check-label" for="radioDefault2">
+              Intermedio
+            </label>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
+            <label class="form-check-label" for="radioDefault3">
+              Experimentado
+            </label>
+          </div>
+
+          <div class="mb-4">
+            <label for="exampleFormControlTextarea1" class="form-label">
+              <h3>Consultas</h3>
+            </label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+          <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+          <label class="btn btn-outline-success me-2" for="success-outlined">Enviar</label>
+
+          <input type="checkbox" class="btn-check" id="btn-check-2-outlined" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="btn-check-2-outlined">Limpiar</label>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SENDEROS -->
+  <section class="section-padding section-green" id="senderos">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Senderos</h2>
+        <p>Explorá los diferentes recorridos y descubrí paisajes únicos de la cordillera.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- SENDER0 1 -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/HvK4CqvGJnDmtcWfKOBpSwh2Uw_hOepEiVavQSCkKImehne262EK3WAP2VIpI1dn6Xl9Rfnlf5ABo720YovYdjmwTvB0F-eSBdh1-SLrxZwend0EqFVYtFNu9CneHU4jPmteM7K5LLGKCqrtKHe6OK4KmVVVuqp_HqJZaxDPWej3cLYpdWIXz22z7-f7asNq?purpose=fullsize" class="card-img-top" alt="Sendero Valle Verde">
+
+          <div class="card-body">
+            <h5 class="card-title">Sendero Valle Verde</h5>
+            <p class="card-text">Recorrido entre praderas verdes y pequeños arroyos, ideal para familias y principiantes.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="badge text-bg-success">Fácil</span></li>
+            <li class="list-group-item">2KM</li>
+            <li class="list-group-item">1 Hora</li>
+            <li class="list-group-item"><span class="badge text-bg-success">Abierto</span></li>
+            <li class="list-group-item">
+              <button class="btn btn-outline-success w-100" type="button">Más Información</button>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- SENDERO 2 -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/cXJg16ziGPjN325GR4u53FOpgUlf77E0rKk0PDYqE4TmXcoUdwL028lU184N4tRbWV5iGtYFd62xLkwFXFwFHoIfZP9gIVotgoQ9mmLStOkZL3uoy3Q3bR0GESSJRMGrQNcm9zlk5aDTkvO0pff76W67BogYV_50HJdmMh2_d9iIX7AhLBf5rbl6-5D3Zv2T?purpose=fullsize" class="card-img-top" alt="Sendero Huellas del Guanaco">
+
+          <div class="card-body">
+            <h5 class="card-title">Sendero Huellas del Guanaco</h5>
+            <p class="card-text">Un camino entre pastizales de montaña donde es posible observar guanacos y zorros andinos a distancia.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="badge text-bg-success">Fácil</span></li>
+            <li class="list-group-item">3KM</li>
+            <li class="list-group-item">1 hora 30 Minutos</li>
+            <li class="list-group-item"><span class="badge text-bg-success">Abierto</span></li>
+            <li class="list-group-item">
+              <button class="btn btn-outline-success w-100" type="button">Más Información</button>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- SENDERO 3 -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/BVxqR1XA_gVa3b4rqm9dMTenrQgvUBntw3A5_bkAeAqWpWtr-0fCs57Ldxtlw1J5kIapeOEhwTPJesN85M3i6nLnXkXR4_JXydtdAmZpZJzPv3NE148o98moKXTln7V0KoS_JSY3MJ6G7zqffbweUuNsk26mwrJ-Gb3llvmk0KtQmidA-ROjavKiVsWzmKMo?purpose=fullsize" class="card-img-top" alt="Sendero Bosque Encantado">
+
+          <div class="card-body">
+            <h5 class="card-title">Sendero Bosque Encantado</h5>
+            <p class="card-text">Atraviesa un bosque de lengas y coihues donde se pueden observar aves y plantas autóctonas.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="badge text-bg-success">Fácil</span></li>
+            <li class="list-group-item">4KM</li>
+            <li class="list-group-item">2 Horas</li>
+            <li class="list-group-item"><span class="badge text-bg-danger">Cerrado por tormenta</span></li>
+            <li class="list-group-item">
+              <button class="btn btn-outline-success w-100" type="button">Más Información</button>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- SENDERO 4 -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/lC-wowoAJCZFTw3eDOWuX0yTCmdA3H-NHbZ4DVE4A1DlLZkx8HERFY-JUvEKNHAOfrDnNVpJX3vVyGNf70ZgDbhRoC4nUpYtbt2WgqsDKwHdl3-gbKbxv0rCDOAtqM7Q3mmFFldxxRy_3SNWF5A2r--eC-PbvfPKC7N51_vbPrI2i6E9CXfjF3geY4GXM54b?purpose=fullsize" class="card-img-top" alt="Sendero Lago Cristalino">
+
+          <div class="card-body">
+            <h5 class="card-title">Sendero Lago Cristalino</h5>
+            <p class="card-text">Conduce hasta un lago de aguas transparentes rodeado de montañas, perfecto para fotografiar paisajes.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="badge text-bg-warning">Moderado</span></li>
+            <li class="list-group-item">5KM</li>
+            <li class="list-group-item">2 Horas 30 Minutos</li>
+            <li class="list-group-item"><span class="badge text-bg-warning">Precaución</span></li>
+            <li class="list-group-item">
+              <button class="btn btn-outline-success w-100" type="button">Más Información</button>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- SENDERO 5 -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/C9xcgg3qm_syPvPLUaVLCGYDIhDlNfb6jfylAU_-BV5rGlnTyfwbyqhzIjhKrg8X5CW8q3O-AV25jY-43E39S4Ht9sV8rKiNnBnmzECf23eCGd0Z6zwux4rcxb73RlmgMFAsEIlk67XUqJSmt6jTGRtcwFNwwKZqZPQoVMZI2m-OifDXRZgghQ5olUSorIR5?purpose=fullsize" class="card-img-top" alt="Sendero Mirador del Sol">
+
+          <div class="card-body">
+            <h5 class="card-title">Sendero Mirador del Sol</h5>
+            <p class="card-text">Recorre laderas montañosas hasta un mirador desde donde se pueden contemplar los valles y las cumbres nevadas.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="badge text-bg-warning">Moderado</span></li>
+            <li class="list-group-item">6KM</li>
+            <li class="list-group-item">3 Horas</li>
+            <li class="list-group-item"><span class="badge text-bg-warning">Precaución</span></li>
+            <li class="list-group-item">
+              <button class="btn btn-outline-success w-100" type="button">Más Información</button>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- SENDERO 6 -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/8mmK9JMczTmH-1GJJr3j8RH8wxa3ySntjP5-AUg8FCkOgAU7Thxqr_9QYDE-678vlfOftBs4pUA25JQ8iJ005VzS22COQYnk7VfYDljuqeu9J6XaSkqIJkloIBgLJPY1uJlwwpUvD4eOud6rp_76GJzdCtJXD8yFJolsFo9xUSkOUq-xDfBFcIZkt4pb-o7n?purpose=inline" class="card-img-top" alt="Sendero Cumbre del Águila">
+
+          <div class="card-body">
+            <h5 class="card-title">Sendero Cumbre del Águila</h5>
+            <p class="card-text">Una subida exigente que llega a un mirador natural con vistas panorámicas de la cordillera.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="badge text-bg-danger">Difícil</span></li>
+            <li class="list-group-item">8KM</li>
+            <li class="list-group-item">5 Horas</li>
+            <li class="list-group-item"><span class="badge text-bg-warning">Precaución</span></li>
+            <li class="list-group-item">
+              <button class="btn btn-outline-success w-100" type="button">Más Información</button>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FAUNA -->
+  <section class="section-padding section-light" id="fauna">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Fauna</h2>
+        <p>Conocé algunas de las especies que habitan este maravilloso entorno natural.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- CÓNDOR -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/sqeYZm5H25HyfbrhlKb-ll8UhTdUGXZDbFtUbDRH_Pa5H6hPQV7vQvlLhKO3d46E_tH6-2EZ2wAhWdGy2rOwY0_KsWGUyyFQMOQeppuB3pVx8h7IWrkoFz5sIfg9a41eQL71QEzrIJkXSQM_vAw4J0s4tddwyZ0crwXnbanWmGdArNkZMgcj_lXDgU12VUMW?purpose=fullsize" class="card-img-top" alt="Cóndor andino">
+
+          <div class="card-body">
+            <h5 class="card-title">Cóndor andino</h5>
+            <p class="card-text">Ave de gran tamaño que vuela sobre las montañas y busca corrientes de aire para planear.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Especie: Vultur gryphus</li>
+            <li class="list-group-item"><span class="badge text-bg-success">Frecuente</span></li>
+          </ul>
+
+        </div>
+
+        <!-- GUANACO -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/H__Vo9xZFqtopEFgXmGUpT8prVJhbvhL9-kvqKINInPvgCMi8FmwGy1lL4vuRfcheCY-hjOFu104sSE8E7DjoTs-FH58ery-XjqCMTcEC47dzwjPOfXqt8gaq9yO6wEDcmvXZTRhiGwY2t_ND3EiUyO9DpbGRWvnFhSeMb3GMxuta6YX4velUscY-nA89MtL?purpose=fullsize" class="card-img-top" alt="Guanaco">
+
+          <div class="card-body">
+            <h5 class="card-title">Guanaco</h5>
+            <p class="card-text">Mamífero herbívoro que vive en grupos y se alimenta de pastos de las zonas altas.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Especie: Lama guanicoe</li>
+            <li class="list-group-item"><span class="badge text-bg-success">Frecuente</span></li>
+          </ul>
+
+        </div>
+
+        <!-- ZORRO -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/we-Q2HCUOMe6BTNU4NB1d9ahGIoVi5YPC-O95lSXDIT-_BDUc7opjGzxnlzvRheQUS2knlyCs57oc7qju7mYKeRGfKpPHhqbHK1yCrqPogvIONSxYRaxOCbPbIudU_AJNh64ez248YJGo8uyH-H1X8IfYBZgVOQjky9j3HnZoawe9N6zo4MF7wmIT7ZUIm4R?purpose=fullsize" class="card-img-top" alt="Zorro colorado">
+
+          <div class="card-body">
+            <h5 class="card-title">Zorro colorado</h5>
+            <p class="card-text">Zorro de pelaje rojizo que recorre valles y laderas en busca de alimento.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Especie: Lycalopex culpaeus</li>
+            <li class="list-group-item"><span class="badge text-bg-warning">Poco frecuente</span></li>
+          </ul>
+
+        </div>
+
+        <!-- ÁGUILA MORA -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/Z-Ox6Y5wryiwpiiASQRo23I8jakGy0BGYCGRa6hSrl9CbkjXOQqovOS_ZLoqtMwe_B9rE5dWr3X58CA6scQMJq30o1ZB66G10amHt7_VThkZLc6xsBOZCJGpklsHeW6Mnglbu_tTzn6Aiq8yOJbLCQ90cUVSIBjz-UvZLAmrPblC5Ld0DPbpo1qKolWPBvQ7?purpose=fullsize" class="card-img-top" alt="Águila mora">
+
+          <div class="card-body">
+            <h5 class="card-title">Águila mora</h5>
+            <p class="card-text">Ave rapaz que utiliza los acantilados y las corrientes de aire para buscar presas.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Especie: Geranoaetus melanoleucus</li>
+            <li class="list-group-item"><span class="badge text-bg-warning">Poco frecuente</span></li>
+          </ul>
+
+        </div>
+
+        <!-- PUMA -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/5-yCnPujdfGx_H-SRQMmHZxoOMTkZFRqkdZzfBlgTztnPsEuMh4OaMEARuLXDJymaESmKK3wcmH5REs4fKCGGIIX8C-O6nYfZe6o0iGtvGY6XVr-a3ON9O8qqI4QpwBXEKjjbICG1DfD6Lbj2b1yDXXGBjEslcGtj4GKMDCB7bwv5i9ZVCCf1qdbHhtk96aO?purpose=fullsize" class="card-img-top" alt="Puma">
+
+          <div class="card-body">
+            <h5 class="card-title">Puma</h5>
+            <p class="card-text">Felino solitario y ágil que habita en zonas rocosas y bosques de montaña.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Especie: Puma concolor</li>
+            <li class="list-group-item"><span class="badge text-bg-danger">Difícil de observar</span></li>
+          </ul>
+
+        </div>
+
+        <!-- HUEMUL -->
+        <div class="card">
+
+          <img src="https://images.openai.com/static-rsc-4/K-Ymw3S5lSDLu7v2_l3KGVfMxQxNgQalG2X_IzdUgBUcU3NQRd1EbujpWfM6iehjoeEFTAv_BQx_UtD3hAK26XFBjcB4b_KQgS4OfyaqYWXVuspOsiwXUxM7xy0sA21z71RVRxDNtZsLI_v2NzHmBrjzBeQs6C2ZPPsjnLxk76s?purpose=inline" class="card-img-top" alt="Huemul">
+
+          <div class="card-body">
+            <h5 class="card-title">Huemul</h5>
+            <p class="card-text">Ciervo nativo de los Andes australes que habita en bosques y laderas montañosas.</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Especie: Hippocamelus bisulcus</li>
+            <li class="list-group-item"><span class="badge text-bg-danger">Difícil de observar</span></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+
+    <div class="container">
+      <h4>Montañas del Sol</h4>
+      <p>“Donde las montañas tocan el cielo”</p>
+      <p class="mt-3">Un espacio para descubrir, disfrutar y proteger la naturaleza.</p>
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+
+/* ==================================
+   ERROR 404: REALIDAD PERDIDA
+   Estilo retro - computadora 1996
+   ================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 35px 16px;
+    background-color: #171B18;
+    background-image:
+        radial-gradient(ellipse at center, #263129 0%, #171B18 75%);
+    color: #8CFF9B;
+    font-family: "Courier New", monospace;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+.terminal {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 35px;
+    border: 2px solid #8CFF9B;
+    outline: 5px solid #303B31;
+    background-color: rgba(12, 18, 13, 0.96);
+    box-shadow: 0 0 25px rgba(140, 255, 155, 0.12);
+    animation: aparecer 0.8s ease;
+}
+
+.etiqueta {
+    color: #C4A36A;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    border-bottom: 1px dashed #526854;
+    padding-bottom: 12px;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    text-shadow: 0 0 12px rgba(140, 255, 155, 0.3);
+}
+
+h2 {
+    font-size: 1.15rem;
+    margin-top: 28px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+p {
+    font-size: 0.95rem;
+}
+
+.rojo {
+    color: #D56B4D;
+}
+
+.verde {
+    color: #8CFF9B;
+}
+
+.pantalla {
+    margin: 25px 0;
+    padding: 18px;
+    background: #080C09;
+    border: 1px solid #405642;
+    box-shadow: inset 0 0 15px rgba(140, 255, 155, 0.05);
+}
+
+.pantalla p {
+    margin: 6px 0;
+    overflow-wrap: anywhere;
+}
+
+.cursor {
+    animation: parpadeo 1s steps(2, start) infinite;
+}
+
+.archivo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 15px 0;
+    padding: 16px;
+    border: 1px solid #526854;
+    background: rgba(140, 255, 155, 0.035);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.archivo:hover {
+    background-color: rgba(140, 255, 155, 0.12);
+    transform: translateX(5px);
+}
+
+.archivo p {
+    margin: 5px 0 0;
+    color: #C4A36A;
+}
+
+.icono {
+    color: #C4A36A;
+    font-size: 0.85rem;
+}
+
+.acertijo {
+    margin: 28px 0;
+    padding: 20px;
+    border-left: 3px solid #C4A36A;
+    background: rgba(196, 163, 106, 0.06);
+}
+
+.pista {
+    color: #C4A36A;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.secreto {
+    padding: 12px;
+    border: 1px dashed #526854;
+    text-align: center;
+}
+
+.revelar {
+    color: #080C09;
+    background-color: #080C09;
+    padding: 3px 7px;
+    cursor: help;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.revelar:hover,
+.revelar:focus {
+    color: #8CFF9B;
+    background-color: #263129;
+    outline: 1px solid #8CFF9B;
+}
+
+.boton {
+    display: inline-block;
+    margin: 18px 0;
+    padding: 12px 20px;
+    border: 1px solid #8CFF9B;
+    color: #8CFF9B;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.25s ease;
+}
+
+.boton:hover,
+.boton:focus {
+    color: #171B18;
+    background: #8CFF9B;
+    box-shadow: 0 0 15px rgba(140, 255, 155, 0.25);
+}
+
+.volver {
+    display: block;
+    width: fit-content;
+    color: #C4A36A;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.volver:hover {
+    color: #8CFF9B;
+    text-decoration: underline;
+}
+
+.sello {
+    display: table;
+    margin: 25px auto;
+    padding: 12px 20px;
+    border: 2px solid #8CFF9B;
+    color: #8CFF9B;
+    font-weight: bold;
+    transform: rotate(-3deg);
+    letter-spacing: 2px;
+}
+
+blockquote {
+    margin: 25px 0;
+    padding: 18px;
+    border-left: 3px solid #D56B4D;
+    color: #C4A36A;
+    font-style: italic;
+}
+
+footer {
+    margin-top: 35px;
+    padding-top: 15px;
+    border-top: 1px dashed #526854;
+    color: #758778;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+@keyframes parpadeo {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .terminal {
+        padding: 20px 16px;
+    }
+
+    .archivo {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .boton {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
